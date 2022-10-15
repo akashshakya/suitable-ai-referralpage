@@ -1,0 +1,379 @@
+
+* {
+  font-family: Raleway, sans-serif !important;
+}
+
+body {
+  background: #f8f9fa;
+}
+
+.man {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 47px;
+}
+.name {
+  position: absolute;
+  margin-top: 18px;
+  margin-left: 80px;
+  line-height: 5px;
+}
+.banner {
+  /* position: absolute; */
+  width: 100%;
+  height: 358px;
+  /* left: 0px; */
+  /* top: 0px; */
+  background: #0ed746;
+}
+
+.referral-heading {
+  position: absolute;
+  /* width: 286px;
+  height: 47px; */
+  left: 162px;
+  margin-top: 66px;
+
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: #ffffff;
+}
+
+.search-box {
+  box-sizing: border-box;
+  position: absolute;
+  width: 351px;
+  height: 47px;
+  left: 162px;
+  top: 169px;
+  background: #ffffff;
+  border: 1px solid rgba(50, 50, 50, 0.3);
+  border-radius: 0px 6px 6px 0px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  text-indent: 10px;
+  color: #323232;
+}
+
+.candidate-card {
+  position: absolute;
+  left: 162px;
+  right: 162px;
+  top: 290px;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+.reward {
+  position: absolute;
+  margin-top: 0px !important;
+  right: 50px;
+  font-weight: 600;
+  font-size: 30px;
+  color: rgba(50, 50, 50, 0.5)
+}
+
+.cardBox{
+  margin: 25px !important;  
+  height: 95px !important; 
+}
+
+
+.cardBox:nth-of-type(even) {
+  background: #f8f9fa;
+}
+
+.table-head {
+  font-weight: 600 !important;;
+  font-size: 20px !important;
+  color: #323232 !important;
+  border: none !important;
+}
+
+.table-show{
+  margin-top: '10px';
+  margin-bottom: "-15px";
+}
+
+.search-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 477px;
+  top: 184px;
+  
+}
+
+/* ====================Media Queries - Mobile devices===================== */
+@media (min-width: 320px) and (max-width: 480px) {
+  .candidate-card {
+    /* position: absolute; */
+    left: 0px;
+    right: 0px;
+    top: 195px;
+    /* background: #ffffff; */
+    border-radius: 0px;
+  }
+  .banner {
+    /* position: absolute; */
+    width: 100%;
+    height: 200px;
+    /* left: 0px; */
+    /* top: 0px; */
+    background: #0ed746;
+  }
+  
+  .referral-heading {
+    position: absolute;
+    /* width: 286px;
+    height: 47px; */
+    left: 60px;
+    margin-top: 40px;
+    font-size: 30px;
+    
+    /* font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 47px;
+    color: #ffffff; */
+  }
+  
+  .search-box {
+    /* box-sizing: border-box; */
+    /* position: absolute; */
+    width: 270px;
+    height: 38px;
+    left: 55px;
+    top: 105px;
+    /* background: #ffffff;
+    border: 1px solid rgba(50, 50, 50, 0.3);
+    border-radius: 0px 6px 6px 0px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    text-indent: 10px;
+    color: #323232; */
+  }
+  .search-icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 290px;
+    top: 115px;
+  }
+  .table-head{
+    display: none !important;
+  }
+  .cardBox{
+    margin: 5px !important;
+    height: 185px !important;
+  }
+  .name{
+    /* text-align: center; */
+    line-height: 5px;
+    position:inherit;
+    margin-left: 165px;
+  }
+  .man{
+    position: absolute;
+    width: auto;
+    height: 60px;
+    left: 90px;
+    margin-top: -15px !important; 
+    /* text-align: center; */
+  }
+}
+
+/* ====================Media Queries===================== */
+/* iPads, Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+
+.candidate-card {
+  /* position: absolute; */
+  left: 0px;
+  right: 0px;
+  top: 195px;
+    /* background: #ffffff; */
+    border-radius: 0px;
+}
+  .banner {
+    /* position: absolute; */
+    width: 100%;
+    height: 200px;
+    /* left: 0px; */
+    /* top: 0px; */
+    background: #0ed746;
+  }
+
+
+  .referral-heading {
+    position: absolute;
+    /* width: 286px;
+    height: 47px; */
+    left: 60px;
+    margin-top: 40px;
+    font-size: 30px;
+    
+    /* font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 47px;
+    color: #ffffff; */
+  }
+  
+  .search-box {
+    /* box-sizing: border-box; */
+    /* position: absolute; */
+    width: 270px;
+    height: 38px;
+    left: 55px;
+    top: 105px;
+    /* background: #ffffff;
+    border: 1px solid rgba(50, 50, 50, 0.3);
+    border-radius: 0px 6px 6px 0px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    text-indent: 10px;
+    color: #323232; */
+  }
+  .search-icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 290px;
+    top: 115px;
+  }
+ 
+  .table-head {
+    font-weight: 600 !important;;
+    font-size: 5px !important;
+    color: #323232 !important;
+    border: none !important;
+  }
+  .table-head{
+    display: none !important;
+  }
+  .cardBox{
+    margin: 5px !important;
+    height: 185px !important;
+  }
+  .name{
+    text-align: center;
+    line-height: 5px;
+    position:inherit;
+
+  }
+  .man{
+    position: absolute;
+  width: auto;
+  height: 60px;
+  left: 230px;
+  margin-top: -15px !important; 
+  text-align: center;
+  }
+}
+
+
+/* ====================Media Queries===================== */
+/* Small screens, laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .candidate-card {
+    /* position: absolute; */
+    left: 0px;
+    right: 0px;
+    top: 195px;
+      /* background: #ffffff; */
+      border-radius: 0px;
+  }
+    .banner {
+      /* position: absolute; */
+      width: 100%;
+      height: 200px;
+      /* left: 0px; */
+      /* top: 0px; */
+      background: #0ed746;
+    }
+  
+  
+    .referral-heading {
+      position: absolute;
+      /* width: 286px;
+      height: 47px; */
+      left: 60px;
+      margin-top: 40px;
+      font-size: 30px;
+      
+      /* font-family: "Raleway";
+      font-style: normal;
+      font-weight: 700;
+      line-height: 47px;
+      color: #ffffff; */
+    }
+    
+    .search-box {
+      /* box-sizing: border-box; */
+      /* position: absolute; */
+      width: 270px;
+      height: 38px;
+      left: 55px;
+      top: 105px;
+      /* background: #ffffff;
+      border: 1px solid rgba(50, 50, 50, 0.3);
+      border-radius: 0px 6px 6px 0px;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 23px;
+      text-indent: 10px;
+      color: #323232; */
+    }
+    .search-icon {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      left: 290px;
+      top: 115px;
+    }
+    .table-head{
+      display: none !important;
+    }
+
+
+    .cardBox{
+      margin: 5px !important;
+      height: 185px !important;
+    }
+
+    .man{
+    position: absolute;
+    width: auto;
+    height: 60px;
+    left: 230px;
+    margin-top: -15px !important; 
+    text-align: center;
+    }
+    .name{
+      text-align: center;
+      line-height: 5px;
+      position:inherit;
+    }
+}
+
+
+/* ====================Media Queries===================== */
+/* Desktops, large screens */
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+}
+
+
+
+/* Extra large screens, TV */
+@media (min-width: 1201px){
+
+}
