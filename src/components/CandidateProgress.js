@@ -12,6 +12,8 @@ import StepConnector, {
 import man from "../assets/man.svg";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import rewardIcon from '../assets/reward.svg'
+import rewardIcon2 from '../assets/reward2.svg'
 
 
 // Progress Stepper Bar
@@ -68,17 +70,27 @@ const ColorlibStepIconRoot = styled("div")(({ theme, ownerState }) => ({
   }),
 }));
 
+
 function ColorlibStepIcon(props) {
-  const { active, completed, className } = props;
+  const { active, completed } = props;
+  console.log(props)
+
   return (
-    <ColorlibStepIconRoot
+    <ColorlibStepIconRoot 
       ownerState={{ completed, active }}
-      className={className}
+      style={props.icon===5 ?
+         props.active ? {background:"none", boxShadow:'none', border:"none", height:'37px'}:
+          {background:"none",boxShadow:'none', border:"none", height:'28px'}:{}}
     >
-      {props.completed && <Check style={{ width: "14", height: "14" }} />}
+      { props.icon===5 ? props.active ? <img alt="reward-icon" src={rewardIcon2} className="rewardIcon-style" />: 
+        <img alt="reward-icon" src={rewardIcon} className="rewardIcon-style" />: 
+        props.completed && <Check style={{ width: "14", height: "14" }} />}
+      
     </ColorlibStepIconRoot>
   );
+
 }
+
 
 ColorlibStepIcon.propTypes = {
   /**
@@ -98,7 +110,7 @@ ColorlibStepIcon.propTypes = {
   icon: PropTypes.node,
 };
 
-const steps = ["Referred", "Interviewed", "Hired", "Joined", "Reward\n($2000)"];
+const steps = ["Referred", "Interviewed", "Hired", "Joined", "Reward"];
 
 export default function CandidateProgress(props) {
 
@@ -112,12 +124,12 @@ export default function CandidateProgress(props) {
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);
   });
-  console.log(window.innerWidth)
+
   return (
     <div  className="cardBox">
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={0}>
-          <Grid item xs={12} md={3} lg={3}>
+          <Grid item xs={12} md={12} lg={2}>
             <div>
               <img
                 src={man}
@@ -127,34 +139,36 @@ export default function CandidateProgress(props) {
               />
               <div className="name">
                 <p style={{ fontSize: "18px", fontWeight: 600 }}>
-                  Anmol Mahajan
+                  {props.candidateName}
                 </p>
                 <p
                   style={{ color: "rgba(50, 50, 50, 0.58)", fontSize: "16px", fontWeight: 600}}
                 >
-                  Sr.Engineer
+                  {props.designation}
                 </p>
               </div>
             </div>
           </Grid>
-          <Grid item xs={12} md={9} lg={9}>
+          <Grid item xs={12} md={12} lg={10}>
             <div style={{ marginTop: "30px" }}>
               <Stack spacing={2}>
                 <Stepper
                   alternativeLabel
-                  activeStep={props.stepNo}
+                  activeStep={props.stepNumber}
                   connector={<ColorlibConnector />}
                 >
                   {steps.map((label, index) => (
-                    <Step sx={{ width: "100%" }} key={label}>
+
+
+                    <Step sx={{ width: "100%" }} key={label} index={index}>
                       <StepLabel StepIconComponent={ColorlibStepIcon} key={index}>
-                        <div style={{fontWeight:'bold', color:'black'}}>
+                        <div style={{fontWeight:'bold', color:'black'}} className="label-style">
 
                         {screenWidth <= 1024 ? label : ''}
                         </div>
-                        {/* {console.log(screenWidth)} */}
                       </StepLabel>
                     </Step>
+
                   ))}
                 </Stepper>
                 {/* <span className="reward">
