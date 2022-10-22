@@ -6,59 +6,59 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 
-export default function CandidateCard() {
-  const CandidateObjectArray = [
-    {
-      candidateName: "Anmol Mahajan", 
-      designation : "Sr.Engineer",
-      stepNumber : 4
-    },
-    {
-      candidateName: "Virat Kohli", 
-      designation : "Sr.Engineer",
-      stepNumber : 2
-    },
-    {
-      candidateName: "Adam Gilchrist", 
-      designation : "Sr.Engineer",
-      stepNumber : 1
-    },
-    {
-      candidateName: "Elon Musk", 
-      designation : "Sr.Engineer",
-      stepNumber : 1
-    },
-    {
-      candidateName: "Steve Jobs", 
-      designation : "Sr.Engineer",
-      stepNumber : 4
-    },
-    {
-      candidateName: "Steve Wozniak", 
-      designation : "Sr.Engineer",
-      stepNumber : 2
-    },
-    {
-      candidateName: "Mark Zuckerberg", 
-      designation : "Sr.Engineer",
-      stepNumber : 4
-    },
-    {
-      candidateName: "Roger Federer", 
-      designation : "Sr.Engineer",
-      stepNumber : 3
-    },
-    {
-      candidateName: "Cristiano Ronaldo", 
-      designation : "Sr.Engineer",
-      stepNumber : 4
-    },
-    {
-      candidateName: "Sachin Tendulkar", 
-      designation : "Sr.Engineer",
-      stepNumber : 3
-    }
-  ]
+export default function CandidateCard(props) {
+  // const CandidateObjectArray = [
+  //   {
+  //     candidateName: "Anmol Mahajan", 
+  //     designation : "Sr.Engineer",
+  //     stepNumber : 4
+  //   },
+  //   {
+  //     candidateName: "Virat Kohli", 
+  //     designation : "Sr.Engineer",
+  //     stepNumber : 2
+  //   },
+  //   {
+  //     candidateName: "Adam Gilchrist", 
+  //     designation : "Sr.Engineer",
+  //     stepNumber : 1
+  //   },
+  //   {
+  //     candidateName: "Elon Musk", 
+  //     designation : "Sr.Engineer",
+  //     stepNumber : 1
+  //   },
+  //   {
+  //     candidateName: "Steve Jobs", 
+  //     designation : "Sr.Engineer",
+  //     stepNumber : 4
+  //   },
+  //   {
+  //     candidateName: "Steve Wozniak", 
+  //     designation : "Sr.Engineer",
+  //     stepNumber : 2
+  //   },
+  //   {
+  //     candidateName: "Mark Zuckerberg", 
+  //     designation : "Sr.Engineer",
+  //     stepNumber : 4
+  //   },
+  //   {
+  //     candidateName: "Roger Federer", 
+  //     designation : "Sr.Engineer",
+  //     stepNumber : 3
+  //   },
+  //   {
+  //     candidateName: "Cristiano Ronaldo", 
+  //     designation : "Sr.Engineer",
+  //     stepNumber : 4
+  //   },
+  //   {
+  //     candidateName: "Sachin Tendulkar", 
+  //     designation : "Sr.Engineer",
+  //     stepNumber : 3
+  //   }
+  // ]
 
 
   return (
@@ -79,7 +79,7 @@ export default function CandidateCard() {
     </TableContainer>
 
       {
-        CandidateObjectArray.map((element, index)=>{
+        props.CandidateObjectArray.map((element, index)=>{
           return (
             <CandidateProgress key={index} stepNumber={element.stepNumber} candidateName={element.candidateName} designation={element.designation}/>
           )
