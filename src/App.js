@@ -67,7 +67,7 @@ function App() {
     let value = e.target.value;
     let searchArray = [];
     if (value.length > 0) {
-      const regex = new RegExp(`^${value}`, 'i');
+      const regex = new RegExp(`${value}`, 'i');
       searchArray = CandidateObjectArray.sort().filter(word => regex.test(word.candidateName))
     }
     setSuggestions(searchArray);
